@@ -8,3 +8,10 @@ How to create your database:
 step1: Go to Model : ECCoreWarehouseDBContext.cs 
 step2: Look for optionsBuilder and replace XXXX with your connection string. 
 ==> for example, your connection string is DESKTOP-ABCD/SQLEXPRESS. optionsBuilder.UseSqlServer(@"Server=DESKTOP-ABCD/SQLEXPRESS; Database=EFCoreWarehouseDb; Trusted_Connection=True;");
+
+===> you can also set it to optionsBuilder.UseSqlServer(@"Integrated Security=SSPI;Persist Security Info=False .....) if you are using Integrated security or persist security....
+
+New Migration: 
+1. Open Package manager console.
+2. add migration EFCoreWarehouseDB
+3. update database
