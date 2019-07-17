@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDCoreReact", "CRUDCoreReact.csproj", "{2566D3CD-6246-421C-9CFC-002116972B67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2566D3CD-6246-421C-9CFC-002116972B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2566D3CD-6246-421C-9CFC-002116972B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2566D3CD-6246-421C-9CFC-002116972B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2566D3CD-6246-421C-9CFC-002116972B67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D0EF656-53D4-440A-9B97-797EA8047D6E}
+	EndGlobalSection
+EndGlobal
