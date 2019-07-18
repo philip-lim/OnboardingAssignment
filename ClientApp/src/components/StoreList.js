@@ -90,7 +90,7 @@ export class StoreList extends React.Component {
 }
 
 //here we are declaring a class which have the same properties as we have in model class.
-export class StoreListData {
+export class storeListData {
     storeId = 0;
     storeName = "";
     storeAddress = "";

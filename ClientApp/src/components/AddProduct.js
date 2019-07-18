@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { ProductListData } from './ProductList';
+import { productListData } from './ProductList';
 
 
 export class AddProduct extends React.Component {
@@ -7,7 +7,7 @@ export class AddProduct extends React.Component {
         super(props);
 
         //here we are intializing the interface's fields with default values.
-        this.state = { title: "", loading: true, productList: new ProductListData() };
+        this.state = { title: "", loading: true, productList: new productListData() };
 
         //the productId variable will get the product id from URL.
         var productId = this.props.match.params["productId"];
@@ -21,7 +21,7 @@ export class AddProduct extends React.Component {
                 });
         }
         else {
-            this.state = { title: "Create", loading: false, productList: new ProductListData() };
+            this.state = { title: "Create", loading: false, productList: new productListData() };
         }
 
         this.FuncSave = this.FuncSave.bind(this);

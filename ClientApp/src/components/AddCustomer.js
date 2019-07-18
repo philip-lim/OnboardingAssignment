@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { CustomerListData } from './CustomerList';
+import { customerListData } from './CustomerList';
 
 
 export class AddCustomer extends React.Component {
@@ -7,7 +7,7 @@ export class AddCustomer extends React.Component {
         super(props);
 
         //here we are intializing the interface's fields with default values.
-        this.state = { title: "", loading: true, customerList: new CustomerListData() };
+        this.state = { title: "", loading: true, customerList: new customerListData() };
 
         //the customerId variable will get the customer id from URL.
         var customerId = this.props.match.params["customerId"];
@@ -21,7 +21,7 @@ export class AddCustomer extends React.Component {
                 });
         }
         else {
-            this.state = { title: "Create", loading: false, customerList: new CustomerListData() };
+            this.state = { title: "Create", loading: false, customerList: new customerListData() };
         }
 
         this.FuncSave = this.FuncSave.bind(this);

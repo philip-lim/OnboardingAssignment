@@ -79,9 +79,9 @@ export class SalesList extends React.Component {
             <tbody>
                 {salesListData.map(item =>
                     <tr key={item.salesId}>
-                        <td >{item.customerId}</td>
-                        <td >{item.productId}</td>
-                        <td >{item.storeId}</td>
+                        <td >{item.customerName}</td>
+                        <td >{item.productName}</td>
+                        <td >{item.storeName}</td>
                         <td >{item.dateSold}</td>
                         <td ><button className="action, ui yellow button" onClick={(id) => this.FuncEdit(item.salesId)}>Edit</button></td>
                         <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.salesId)}>Delete</button></td>
@@ -93,10 +93,11 @@ export class SalesList extends React.Component {
 }
 
 //here we are declaring a class which have the same properties as we have in model class.
-export class SalesListData {
+export class salesListData {
     salesId = 0;
-    customerId = "";
-    productId = "";
-    storeId = "";
+    customerName = "";
+    productName = "";
+    storeName = "";
     dateSold = "";
+
 }

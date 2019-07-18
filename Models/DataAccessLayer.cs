@@ -67,6 +67,8 @@ namespace CRUDCoreReact.Models
             }
         }
 
+
+
         //To Delete the record of a particular product  
         public int DeleteProduct(int id)
         {
@@ -301,5 +303,33 @@ namespace CRUDCoreReact.Models
                 throw;
             }
         }
+
+        //To Get the list of CustomerName  
+        public List<CustomerModel> GetCustomer()
+        {
+            List<CustomerModel> lstCustomer = new List<CustomerModel>();
+            lstCustomer = (from CustomerList in db.Customer select CustomerList).ToList();
+
+            return lstCustomer;
+        }
+
+        //To Get the list of StoreName  
+        public List<StoreModel> GetStore()
+        {
+            List<StoreModel> lstStore = new List<StoreModel>();
+            lstStore = (from StoreList in db.Store select StoreList).ToList();
+
+            return lstStore;
+        }
+
+        //To Get the list of ProductName  
+        public List<ProductModel> GetProduct()
+        {
+            List<ProductModel> lstProduct = new List<ProductModel>();
+            lstProduct = (from ProductList in db.Product select ProductList).ToList();
+
+            return lstProduct;
+        }
+
     }
 }

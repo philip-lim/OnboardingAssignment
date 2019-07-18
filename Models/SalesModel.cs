@@ -4,24 +4,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.OData.Edm;
 
 namespace CRUDCoreReact.Models
 {
     [Table("Sales")]
     public class SalesModel
-    {
+    { 
         [Key, Column(Order = 0)]
         public int SalesId { get; set; }
         [Required, Column(Order = 1)]
-        public int ProductId { get; set; }
+        public string ProductName { get; set; }
         [Required, Column(Order = 2)]
-        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
         [Required, Column(Order = 3)]
-        public int StoreId { get; set; }
-        [Required, Column(Order = 4)]
+        public string StoreName { get; set; }
+        [DataType(DataType.Date)]
+        [Required, Column(Order = 4, TypeName = "Date")]
         public DateTime DateSold { get; set; }
-        public virtual CustomerModel CustomerModel { get; set; }
-        public virtual ProductModel ProductModel { get; set; }
-        public virtual StoreModel StoreModel { get; set; }
+        
+        public CustomerModel CustomerModel { get; set; }
+        
+        public ProductModel ProductModel { get; set; }
+       
+        public StoreModel StoreModel { get; set; }
+        
     }
 }

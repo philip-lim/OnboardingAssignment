@@ -24,9 +24,9 @@ namespace CRUDCoreReact.Controllers
 
         [HttpPost]
         [Route("api/Sales/Create")]
-        public int Create(SalesModel sale)
+        public int Create(SalesModel sales)
         {
-            return obj.AddSale(sale);
+            return obj.AddSale(sales);
         }
 
         [HttpGet]
@@ -38,9 +38,9 @@ namespace CRUDCoreReact.Controllers
 
         [HttpPut]
         [Route("api/Sales/Edit")]
-        public int Edit(SalesModel sale)
+        public int Edit(SalesModel sales)
         {
-            return obj.UpdateSale(sale);
+            return obj.UpdateSale(sales);
         }
 
         [HttpDelete]
@@ -50,5 +50,25 @@ namespace CRUDCoreReact.Controllers
             return obj.DeleteSale(id);
         }
 
+        [HttpGet]
+        [Route("api/Store/GetStoreName")]
+        public IEnumerable<StoreModel> DetailsStoreName()
+        {
+            return obj.GetStore();
+        }
+
+        [HttpGet]
+        [Route("api/Product/GetProductName")]
+        public IEnumerable<ProductModel> DetailsProductName()
+        {
+            return obj.GetProduct();
+        }
+
+        [HttpGet]
+        [Route("api/Customer/GetCustomerName")]
+        public IEnumerable<CustomerModel> DetailCustomerName()
+        {
+            return obj.GetCustomer();
+        }
     }
 }

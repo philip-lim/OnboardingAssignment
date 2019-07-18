@@ -1,12 +1,12 @@
 ﻿import React from 'react';
-import { StoreListData } from './StoreList';
+import { storeListData } from './StoreList';
 
 
 export class AddStore extends React.Component {
     constructor(props) {
         super(props);
         //here we are intializing the interface's fields with default values.
-        this.state = { title: "", loading: true, storeList: new StoreListData() };
+        this.state = { title: "", loading: true, storeList: new storeListData() };
         //the storeId variable will get the store id from URL.
         var storeId = this.props.match.params["storeId"];
         //if storeId is greater than 0 then fetch method will get the specific store record and display it as in edit mode.
@@ -18,7 +18,7 @@ export class AddStore extends React.Component {
                 });
         }
         else {
-            this.state = { title: "Create", loading: false, storeList: new StoreListData() };
+            this.state = { title: "Create", loading: false, storeList: new storeListData() };
         }
         this.FuncSave = this.FuncSave.bind(this);
         this.FuncCancel = this.FuncCancel.bind(this);

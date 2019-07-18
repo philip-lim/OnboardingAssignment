@@ -16,8 +16,7 @@ namespace CRUDCoreReact.Models
         public string StoreName { get; set; }
         [Required, Column(Order = 2)]
         public string StoreAddress { get; set; }
-        [Display(Name = "ProductSold")]
-        public virtual List<SalesModel> SalesModels { get; set; }
+        public List<SalesModel> SalesModels { get; set; }
 
     }
 }
