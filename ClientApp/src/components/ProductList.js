@@ -34,7 +34,7 @@ export class ProductList extends React.Component {
         return <div>
             <h1>Product Record</h1>
             <p>
-                <a href="addProduct"><button className="ui blue button">Create New</button></a>
+                <a href="addProduct"><button className="ui blue button"><i className="plus icon"></i>Create New</button></a>
             </p>
             {contents}
         </div>;
@@ -82,8 +82,8 @@ export class ProductList extends React.Component {
                     <tr key={item.productId}>
                         <td >{item.productName}</td>
                         <td >{item.productPrice}</td>
-                        <td ><button className="action, ui yellow button" onClick={(id) => this.FuncEdit(item.productId)}>Edit</button></td>
-                        <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.productId)}>Delete</button></td>
+                        <td ><button className="action, ui yellow button" onClick={(id) => this.FuncEdit(item.productId)}><i className="edit icon"></i>Edit</button></td>
+                        <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.productId)}><i className="trash icon"></i>Delete</button></td>
                     </tr>
                 )}
             </tbody>

@@ -99,9 +99,9 @@ export class AddProduct extends React.Component {
 
 
                 <div className="form-group">
-                    <button type="submit" className="btn btn-default, ui yellow button">Save</button>
+                    <button type="submit" className="btn btn-default, ui yellow button"><i className="save icon"></i>Save</button>
                     {' '}
-                    <button className="btn, ui yellow button" onClick={this.FuncCancel}>Cancel</button>
+                    <button className="btn, ui yellow button" onClick={this.FuncCancel}><i className="cancel icon"></i>Cancel</button>
                 </div >
             </form >
         )

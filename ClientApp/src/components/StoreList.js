@@ -34,7 +34,7 @@ export class StoreList extends React.Component {
         return <div>
             <h1>Store Record</h1>
             <p>
-                <a href="addStore"><button className="ui blue button">Create New</button></a>
+                <a href="addStore"><button className="ui blue button"><i className="plus icon"></i>Create New</button></a>
             </p>
             {contents}
         </div>;
@@ -79,8 +79,8 @@ export class StoreList extends React.Component {
                     <tr key={item.storeId}>
                         <td >{item.storeName}</td>
                         <td >{item.storeAddress}</td>
-                        <td ><button className="action, ui yellow button" onClick={(id) => this.FuncEdit(item.storeId)}>Edit</button></td>
-                        <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.storeId)}>Delete</button></td>
+                        <td ><button className="action, ui yellow button" onClick={(id) => this.FuncEdit(item.storeId)}><i className="edit icon"></i>Edit</button></td>
+                        <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.storeId)}><i className="trash icon"></i>Delete</button></td>
 
                     </tr>
                 )}

@@ -35,7 +35,7 @@ export class CustomerList extends React.Component {
         return <div>
             <h1>Customer Record</h1>
             <p>
-                <a href="addCustomer"><button className="ui blue button">Create New</button></a>
+                <a href="addCustomer"><button className="ui blue button"><i className="plus icon"></i>Create New</button></a>
             </p>
             {contents}
         </div>;
@@ -83,8 +83,8 @@ export class CustomerList extends React.Component {
                     <tr key={item.customerId}>
                         <td >{item.customerName}</td>
                         <td >{item.customerAddress}</td>
-                        <td ><button className="action, ui yellow button"  onClick={(id) => this.FuncEdit(item.customerId)}>Edit</button></td>
-                        <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.customerId)}>Delete</button></td>
+                        <td ><button className="action, ui yellow button" onClick={(id) => this.FuncEdit(item.customerId)}><i className="edit icon"></i>Edit</button></td>
+                        <td ><button className="action, ui red button" onClick={(id) => this.FuncDelete(item.customerId)}><i className="trash icon"></i>Delete</button></td>
                     </tr>
                 )}
             </tbody>
